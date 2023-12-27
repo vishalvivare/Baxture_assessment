@@ -2,12 +2,12 @@
   "name": "baxture_assessment",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "node scripts/development.js",
-    "build": "webpack --mode=production",
-    "start:prod": "npm run build && node dist/bundle.js"
+    "build": "webpack --config webpack.config.js",
+    "start:prod": "npm run build && nodemon dist/app.js"
   },
   "author": "",
   "license": "ISC",

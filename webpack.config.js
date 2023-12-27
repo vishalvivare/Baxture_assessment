@@ -2,10 +2,11 @@
 const path = require("path");
 
 module.exports = {
-	entry: "./src/app.js", // Update this with the entry point of your application
+	mode: "production",
+	entry: "./app.js",
+	target: "node",
 	output: {
-		filename: "bundle.js",
-		path: path.resolve(__dirname, "dist"), // Update this with your desired output directory
+		path: path.resolve(__dirname, "dist"),
+		filename: "app.js",
 	},
-	// Add any necessary loaders, plugins, etc.
 };
