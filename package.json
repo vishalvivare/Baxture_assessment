@@ -5,13 +5,15 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "node scripts/development.js",
+    "start:dev": "nodemon app.js",
     "build": "webpack --config webpack.config.js",
-    "start:prod": "npm run build && nodemon dist/app.js"
+    "start:prod": "npm run build && nodemon dist/app.js",
+    "start:multi": "node cluster.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cluster": "^0.7.7",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",

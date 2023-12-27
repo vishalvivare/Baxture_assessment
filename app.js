@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const connect = require("./configs/db");
 require("dotenv").config();
+const userRouter = require("./routes/users.routes");
 
 let port = process.env.PORT;
 
@@ -11,6 +12,8 @@ connect();
 
 app.use(cors());
 app.use(express.json());
+
+app.use("/api", userRouter);
 
 app.use((req, res) => {
 	res.status(404).json({ message: "Not Found" });

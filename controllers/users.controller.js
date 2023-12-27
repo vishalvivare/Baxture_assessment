@@ -17,7 +17,7 @@ const saveUser = async (req, res) => {
 				}
 			})
 			.catch((err) => {
-				res.status(400).send({ error: err });
+				res.status(400).send({ error: err.message });
 			});
 	} catch (error) {
 		console.log("error", error);
